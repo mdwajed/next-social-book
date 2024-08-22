@@ -24,7 +24,7 @@ export default function Nabvar() {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-gray-900">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 md:flex-row lg:items-center lg:gap-6 text-blue-gray-900">
       <li className="flex items-center gap-x-2 p-1 font-medium">
         <Image width="16" height="17" alt="" src="/home.png" />
 
@@ -49,7 +49,6 @@ export default function Nabvar() {
     </ul>
   );
 
-
   return (
     <Navbar className="mx-auto max-w-screen-xl px-4 py-2 lg:px-8 lg:py-4 shadow-none">
       <div className="flex items-center justify-between text-blue-gray-900">
@@ -59,8 +58,8 @@ export default function Nabvar() {
         >
           Social Book
         </Link>
-        <div className="hidden lg:block">{navList}</div>
-        <div className="hidden md:flex p-2 bg-gray-200 items-center rounded-xl">
+        <div className="hidden md:flex">{navList}</div>
+        <div className="hidden xl:flex p-2 bg-gray-100 items-center rounded-xl">
           <input
             type="text"
             placeholder="search..."
@@ -68,14 +67,14 @@ export default function Nabvar() {
           />
           <Image src="/search.png" alt="" width={14} height={14} />
         </div>
-        <div className="hidden lg:flex items-center gap-x-1">
+        <div className="hidden sm:flex items-center gap-x-2">
           <ClerkLoading>
             <CircularProgress />
           </ClerkLoading>
           <ClerkLoaded>
             <SignedIn>
               <div className="cursor-pointer">
-                <Image src="/people.png" width={20} height={20} alt="" />
+                <Image src="/people.png" width={24} height={24} alt="" />
               </div>
               <div className="cursor-pointer">
                 <Image src="/messages.png" width={20} height={20} alt="" />
@@ -95,7 +94,7 @@ export default function Nabvar() {
         </div>
         <IconButton
           variant="text"
-          className="lg:hidden"
+          className="md:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
@@ -107,14 +106,14 @@ export default function Nabvar() {
       </div>
       <Collapse open={openNav}>
         {navList}
-        <div className="lg:flex items-center gap-x-1">
+        <div className="flex items-center gap-x-2">
           <ClerkLoading>
             <CircularProgress />
           </ClerkLoading>
           <ClerkLoaded>
             <SignedIn>
               <div className="cursor-pointer">
-                <Image src="/people.png" width={20} height={20} alt="" />
+                <Image src="/people.png" width={24} height={24} alt="" />
               </div>
               <div className="cursor-pointer">
                 <Image src="/messages.png" width={20} height={20} alt="" />

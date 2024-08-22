@@ -13,16 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>
-        <Nabvar />
-        {/* <div className="w-full  px-4 md:px-8 lg:px-16 xl:32 2xl:px-64"> */}
-        {/* <div className="w-screen mx-auto max-w-screen-xl px-4 lg:px-8 bg-gray-200"> */}
-        <div className=" bg-gray-200 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-56">
-          {children}
-        </div>
-      </body>
-    </html>
+      <html lang="en">
+        <body className={inter.className}>
+          <Nabvar />
+          <div className="bg-gray-100 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-56">
+            {children}
+          </div>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
